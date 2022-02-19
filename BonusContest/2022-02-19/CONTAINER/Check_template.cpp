@@ -15,7 +15,7 @@ void exit_with_runtime() {
   exit(0);
 }
 
-const string Task = "OILRIG"; // task name
+const string Task = ""; // task name
 const int nTest = 10000; // max test
 
 int random(int l, int r) {
@@ -27,7 +27,11 @@ int main() {
   for(int Test = 1; Test <= nTest; ++ Test) {
     ofstream inp(Task + ".inp");
 
-    /** code **/
+    int m = random(1, 1000), n = random(1, 100), w = random(1, 1000);
+    inp << m << " " << w << " " << n << "\n";
+    for(int i = 1; i <= n; ++ i) {
+      inp << random(1, 1000) << "\n";
+    }
 
     inp.close();
     ////////////////// CODE CHECK ////////////////////////
